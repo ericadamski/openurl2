@@ -1,6 +1,6 @@
 {
   "name": "openurl2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Benjamin Rösner <benjamin.roesner@steinbeis-ias.de>",
   "description": "Open a URL via the operating system (http: in default browser, mailto: in mail client etc.",
   "main": "./openurl.js",
