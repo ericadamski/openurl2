@@ -21,8 +21,11 @@ Install via npm:
 
     npm install openurl
 
-I’m not yet terribly familiar with implementing npm packages, so any feedback is welcome
-(especially experience reports on Windows and Linux, which I can’t test on).
+Fork:
+	
+	In the original openurl package, the F5 key opens a Windows Explorer window, instead of an Email Window.
+	This has been fixed in this fork. As the original Project is no longer maintained, there was no point
+	sending in a pull request.
 
 Related reading:
 
