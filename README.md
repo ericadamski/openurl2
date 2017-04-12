@@ -19,13 +19,13 @@ You can generate emails as follows:
     
 Install via npm:
 
-    npm install openurl
+    npm install openurl2
 
-Fork:
-	
-	In the original openurl package, the F5 key opens a Windows Explorer window, instead of an Email Window.
-	This has been fixed in this fork. As the original Project is no longer maintained, there was no point
-	sending in a pull request.
+openurl2:
+
+In the original openurl package, the F5 key opens a Windows Explorer window, instead of an Email Window.
+This has been fixed in this fork. As the original Project is no longer maintained, we figured there was
+no point sending in a pull request, and instead pushed this Fork.
 
 Related reading:
 
