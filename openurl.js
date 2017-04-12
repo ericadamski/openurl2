@@ -1,20 +1,18 @@
 var spawn = require('child_process').spawn;
 
-var command;
+var commands = {
+    'darwin': function (url) {
+        return spawn('open', [url]);
+    },
+    'win32': function (url) {
+        return spawn('cmd', ['/c', 'start', url]);
+    },
+    'default': function (url) {
+        return spawn('xdg-open', [url]);
+    },
+};
 
-switch(process.platform) {
-    case 'darwin':
-        command = 'open';
-        break;
-    case 'win32':
-        command = 'explorer.exe';
-        break;
-    case 'linux':
-        command = 'xdg-open';
-        break;
-    default:
-        throw new Error('Unsupported platform: ' + process.platform);
-}
+var launcher = commands[process.platform] || commands['default'];
 
 /**
  * Error handling is deliberately minimal, as this function is to be easy to use for shell scripting
@@ -24,7 +22,7 @@ switch(process.platform) {
  */
 
 function open(url, callback) {
-    var child = spawn(command, [url]);
+    var child = launcher(url);
     var errorText = "";
     child.stderr.setEncoding('utf8');
     child.stderr.on('data', function (data) {
@@ -57,9 +55,9 @@ function mailto(recipients, fields, recipientsSeparator, callback) {
         if (index === 0) {
             url += "?";
         } else {
-            url += "&";
+            url += "^&";
         }
-        url += key + "=" + encodeURIComponent(fields[key]);
+        url += key + "=" + encodeURIComponent(decodeURIComponent(fields[key]));
     });
     open(url, callback);
 }
