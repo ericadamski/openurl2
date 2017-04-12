@@ -1,7 +1,7 @@
-openurl – Node.js module for opening URLs
+openurl2 – Node.js module for opening URLs
 =========================================
 
-openurl is a Node.js module for opening a URL via the operating system. This will usually trigger actions such as:
+openurl2 is a Node.js module for opening a URL via the operating system. This will usually trigger actions such as:
 
 - http URLs: open the default browser
 - mailto URLs: open the default email client
