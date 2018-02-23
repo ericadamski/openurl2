@@ -8,12 +8,12 @@ opn-url is a Node.js module for opening a URL via the operating system. This wil
 
 Example interaction on the Node.js REPL:
 
-    > require("openurl").open("http://rauschma.de")
-    > require("openurl").open("mailto:john@example.com")
+    > require("opn-url").open("http://rauschma.de")
+    > require("opn-url").open("mailto:john@example.com")
 
 You can generate emails as follows:
 
-    require("openurl").mailto(["john@example.com", "jane@example.com"],
+    require("opn-url").mailto(["john@example.com", "jane@example.com"],
         { subject: "Hello!", body: "This is\nan automatically sent email!\n" });
 
 Install:
