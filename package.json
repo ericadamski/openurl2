@@ -1,16 +1,14 @@
 {
-  "name": "openurl2",
-  "version": "1.0.1",
-  "author": "Benjamin Rösner <benjamin.roesner@steinbeis-ias.de>",
-  "description": "Open a URL via the operating system (http: in default browser, mailto: in mail client etc.",
-  "main": "./openurl.js",
+  "name": "opn-url",
+  "version": "1.0.0",
+  "author": "Eric Adamski <er.adamski@gmail.com>",
+  "description":
+    "Open a URL via the operating system (http: in default browser, mailto: in mail client etc.)",
+  "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/interagierende-systeme/openurl2"
+    "url": "https://github.com/ericadamski/opn-url"
   },
-  "keywords": [
-    "desktop",
-    "browser"
-  ],
+  "keywords": ["desktop", "browser"],
   "license": "MIT"
 }
